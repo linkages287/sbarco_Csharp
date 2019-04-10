@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3D459C4-65A9-4037-93CB-25F2C83ED237}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EliAssaltoAnfibio</RootNamespace>
+    <AssemblyName>EliAssaltoAnfibio</AssemblyName>
+    <newfilesearch>OnLoadAutoInsert</newfilesearch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Mono.Posix" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="Lidgren.Network">
+      <HintPath>..\..\..\.local\share\MonoDevelop-3.0\LocalInstall\Addins\MonoDevelop.MonoGame.3.0.1\assemblies\Linux\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK">
+      <HintPath>..\..\..\.local\share\MonoDevelop-3.0\LocalInstall\Addins\MonoDevelop.MonoGame.3.0.1\assemblies\Linux\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="MonoGame.Framework, Version=3.0.1.0, Culture=neutral">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tao.Sdl">
+      <HintPath>..\..\..\..\..\Program Files %28x86%29\TaoFramework\bin\Tao.Sdl.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.OpenAl">
+      <HintPath>..\..\..\..\..\Program Files %28x86%29\TaoFramework\bin\Tao.OpenAl.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.OpenGl">
+      <HintPath>..\..\..\..\..\Program Files %28x86%29\TaoFramework\bin\Tao.OpenGl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="gtk-gui\EliAssaltoAnfibio.MainWindow.cs" />
+    <Compile Include="AbstractManager.cs" />
+    <Compile Include="FactoryManager.cs" />
+    <Compile Include="MainProgram.cs" />
+    <Compile Include="InfoWindow.cs" />
+    <Compile Include="gtk-gui\EliAssaltoAnfibio.InfoWindow.cs" />
+    <Compile Include="Simulator.cs" />
+    <Compile Include="IObserver.cs" />
+    <Compile Include="Subject.cs" />
+    <Compile Include="Cargo\Cargo.cs" />
+    <Compile Include="Cargo\CargoManager.cs" />
+    <Compile Include="Elicopters\Elicottero.cs" />
+    <Compile Include="Elicopters\EliManager.cs" />
+    <Compile Include="Spot\Spot.cs" />
+    <Compile Include="Spot\SpotManager.cs" />
+    <Compile Include="Troops\TroopsManager.cs" />
+    <Compile Include="Troops\Soldier.cs" />
+    <Compile Include="ClockTimer.cs" />
+    <Compile Include="CargoOptions.cs" />
+    <Compile Include="EliOptions.cs" />
+    <Compile Include="SpotOptions.cs" />
+    <Compile Include="TruppeOptions.cs" />
+    <Compile Include="gtk-gui\EliAssaltoAnfibio.CargoOptions.cs" />
+    <Compile Include="gtk-gui\EliAssaltoAnfibio.EliOptions.cs" />
+    <Compile Include="gtk-gui\EliAssaltoAnfibio.SpotOptions.cs" />
+    <Compile Include="gtk-gui\EliAssaltoAnfibio.TruppeOptions.cs" />
+    <Compile Include="LandingZone.cs" />
+    <Compile Include="HoldingPoint.cs" />
+    <Compile Include="GrafXNA.cs" />
+    <Compile Include="SimMover.cs" />
+    <Compile Include="StaticSimulator.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <GtkDesignInfo generateGettext="False" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <None Include="EliAssaltoAnfibio.userprefs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Cargo\" />
+    <Folder Include="Elicopters\" />
+    <Folder Include="Spot\" />
+    <Folder Include="Troops\" />
+    <Folder Include="Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\terra4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprite2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprite5.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\pallet60.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\LZ1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Helicopter80_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Helicopter80_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Helicopter80_3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Helicopter80_4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Helicopter80_5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Helicopter80x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\HeliFolded.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\green-rectangle-hi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\barj.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\line.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\troops.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\skull.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

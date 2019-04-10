@@ -1,0 +1,39 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cargo\Cargo.cs">
+    <Files>
+      <File FileName="GrafXNA.cs" Line="1" Column="1" />
+      <File FileName="Simulator.cs" Line="1" Column="1" />
+      <File FileName="MainWindow.cs" Line="1" Column="1" />
+      <File FileName="HoldingPoint.cs" Line="1" Column="1" />
+      <File FileName="LandingZone.cs" Line="1" Column="1" />
+      <File FileName="ClockTimer.cs" Line="1" Column="1" />
+      <File FileName="MainProgram.cs" Line="1" Column="1" />
+      <File FileName="SimMover.cs" Line="1" Column="1" />
+      <File FileName="CargoOptions.cs" Line="1" Column="1" />
+      <File FileName="SpotOptions.cs" Line="1" Column="1" />
+      <File FileName="AbstractManager.cs" Line="1" Column="1" />
+      <File FileName="TruppeOptions.cs" Line="1" Column="1" />
+      <File FileName="AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="EliAssaltoAnfibio.userprefs" Line="1" Column="1" />
+      <File FileName="FactoryManager.cs" Line="1" Column="1" />
+      <File FileName="Subject.cs" Line="1" Column="1" />
+      <File FileName="Elicopters\Elicottero.cs" Line="1" Column="1" />
+      <File FileName="Spot\Spot.cs" Line="1" Column="1" />
+      <File FileName="Spot\SpotManager.cs" Line="1" Column="1" />
+      <File FileName="Cargo\CargoManager.cs" Line="1" Column="1" />
+      <File FileName="Cargo\Cargo.cs" Line="10" Column="17" />
+      <File FileName="Troops\TroopsManager.cs" Line="1" Column="1" />
+      <File FileName="EliOptions.cs" Line="1" Column="1" />
+      <File FileName="IObserver.cs" Line="1" Column="1" />
+      <File FileName="InfoWindow.cs" Line="1" Column="1" />
+      <File FileName="StaticSimulator.cs" Line="1" Column="1" />
+      <File FileName="Troops\Soldier.cs" Line="1" Column="1" />
+      <File FileName="Elicopters\EliManager.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
